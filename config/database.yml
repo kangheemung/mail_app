@@ -7,9 +7,9 @@
 default: &default
   adapter: sqlite3
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  host: 3
+  host: database-1.cnqvtxybgeg2.ap-northeast-1.rds.amazonaws.com
   username: admin
-  password: 3
+  password: testtest
   database: mail_app
   timeout: 5000
 

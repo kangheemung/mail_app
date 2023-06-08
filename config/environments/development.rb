@@ -4,7 +4,7 @@ Rails.application.configure do
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
-  #config.web_console.allowed_ips = '114.182.253.188'
+  
   config.cache_classes = false
 
   # Do not eager load code on boot.
@@ -48,20 +48,27 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+ #config.action_controller.default_url_options = { host: 'https://d96f67405e1344c0b876c76d8e920b41.vfs.cloud9.ap-southeast-1.amazonaws.com' }
 
+  #config.action_mailer.default_url_options = { protocol: 'https', host: 'https://d96f67405e1344c0b876c76d8e920b41.vfs.cloud9.ap-southeast-1.amazonaws.com'}
+ config.web_console.whitelisted_ips='0.0.0.0/0'
+ config.web_console.allowed_ips = '127.0.0.1'
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
-  config.file_watcher = ActiveSupport::EventedFileUpdateChecker
-  config.action_mailer.default_url_options = { protocol: 'https', host: 'https://ap-northeast-1.console.aws.amazon.com'}
+  #config.action_controller.default_url_options = {host: 'https://d96f67405e1344c0b876c76d8e920b41.vfs.cloud9.ap-southeast-1.amazonaws.com',:port => 22}
+  #host = "https://d96f67405e1344c0b876c76d8e920b41.vfs.cloud9.ap-southeast-1.amazonaws.com"
+  #Rails.application.routes.default_url_options[:host] = host
   config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default_url_options = { protocol: 'https', host: 'https://3cf9ce6e37c341d78a70ad12f10299d9.vfs.cloud9.ap-northeast-1.amazonaws.com'}
+ 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :enable_starttls_auto => true,
     :address => "smtp.gmail.com",
     :port => 587,
-    :domain => 'smtp.gmail.com',
-    :user_name => "#{ENV["3"]}",
-    :password => "#{ENV["3"]}",
+    :domain => 'gmail.com',
+    :user_name => '3',
+    :password => '3l',
     :authentication => 'plain'
   }
   
