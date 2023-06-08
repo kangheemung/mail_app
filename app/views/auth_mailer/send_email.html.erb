@@ -1,3 +1,4 @@
 <h1>hi</h1>
 <p>有効化してね</p>
-<p><%= link_to "link_page", confirm_url(@user.id) %></p>
+<p><%= link_to "link_page", confirm_url(@user.activation_token,
+                                                    email: @user.email) %></p>

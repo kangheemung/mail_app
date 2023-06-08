@@ -7,9 +7,9 @@
 default: &default
   adapter: sqlite3
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  host: #
+  host: 3
   username: admin
-  password: #
+  password: 3
   database: mail_app
   timeout: 5000
 

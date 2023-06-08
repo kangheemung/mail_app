@@ -7,6 +7,7 @@ class UsersController < ApplicationController
     if user.save
        session[:user]= user.id
        AuthMailer.send_email(user).deliver_now
+         UserMailer.account_activation(@user).deliver_now#確認メールを送信
       redirect_to root_path
     else
       render :new
