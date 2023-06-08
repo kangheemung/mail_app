@@ -94,8 +94,8 @@ Rails.application.configure do
     :address => "smtp.gmail.com",
     :port => 587,
     :domain => 'gmail.com',
-    :user_name => "#{ENV["kurotamashi20@gmail.com"]}",
-    :password => "#{ENV["eoiotgkydjinqcic"]}",
+    :user_name => "#{ENV["3"]}",
+    :password => "#{ENV["3"]}",
     :authentication => 'plain'
    
   }
