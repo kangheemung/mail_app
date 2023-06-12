@@ -3,11 +3,10 @@ class SessionsController < ApplicationController
         
     end
     def create
-      @user = User.find_by(email: params[:session][:email].downcase)
-        if @user && @user.authenticated?(:activation, params[:id])
-            log_in(@user)
-            params[:session][:remember_me] == '1' ? remember(user) : forget(user)
-            redirect_to users_show_path(@user)
+      user = User.where(email: params[:session][:email]).last
+        if user && user.activated == true && user.authenticate(params[:session][:password])
+            log_in(user)
+            redirect_to users_show_path(user)
         else
            flash[:warning] = "Check your email for the activation link."
            redirect_to root_url

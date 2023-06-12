@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: '3'
+  default from: '#'
   layout 'mailer'
 end

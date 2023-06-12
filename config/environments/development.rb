@@ -59,7 +59,7 @@ Rails.application.configure do
   #host = "https://d96f67405e1344c0b876c76d8e920b41.vfs.cloud9.ap-southeast-1.amazonaws.com"
   #Rails.application.routes.default_url_options[:host] = host
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = { protocol: 'https', host: 'https://3cf9ce6e37c341d78a70ad12f10299d9.vfs.cloud9.ap-northeast-1.amazonaws.com'}
+  config.action_mailer.default_url_options = { host: 'b0957e3ae75f4b0283bb8808cc5a2349.vfs.cloud9.ap-northeast-1.amazonaws.com'}
  
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
@@ -67,8 +67,8 @@ Rails.application.configure do
     :address => "smtp.gmail.com",
     :port => 587,
     :domain => 'gmail.com',
-    :user_name => '3',
-    :password => '3l',
+    :user_name => '#,
+    :password => '"',
     :authentication => 'plain'
   }
   
